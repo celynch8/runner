@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pace:</strong>
+  <%= @run_card.pace %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @run_card.distance %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @run_card.type %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @run_card.day %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @run_card.time %>
+</p>
+
+<p>
+  <strong>Target distance:</strong>
+  <%= @run_card.target_distance %>
+</p>
+
+<p>
+  <strong>Target race:</strong>
+  <%= @run_card.target_race %>
+</p>
+
+<%= link_to 'Edit', edit_run_card_path(@run_card) %> |
+<%= link_to 'Back', run_cards_path %>

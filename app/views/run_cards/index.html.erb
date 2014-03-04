@@ -1,0 +1,39 @@
+<h1>Listing run_cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pace</th>
+      <th>Distance</th>
+      <th>Type</th>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Target distance</th>
+      <th>Target race</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @run_cards.each do |run_card| %>
+      <tr>
+        <td><%= run_card.pace %></td>
+        <td><%= run_card.distance %></td>
+        <td><%= run_card.type %></td>
+        <td><%= run_card.day %></td>
+        <td><%= run_card.time %></td>
+        <td><%= run_card.target_distance %></td>
+        <td><%= run_card.target_race %></td>
+        <td><%= link_to 'Show', run_card %></td>
+        <td><%= link_to 'Edit', edit_run_card_path(run_card) %></td>
+        <td><%= link_to 'Destroy', run_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Run card', new_run_card_path %>

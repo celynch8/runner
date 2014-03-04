@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pace: 1.5
+  distance: 1.5
+  type: 
+  day: MyString
+  time: MyString
+  target_distance: MyString
+  target_race: MyString
+
+two:
+  pace: 1.5
+  distance: 1.5
+  type: 
+  day: MyString
+  time: MyString
+  target_distance: MyString
+  target_race: MyString

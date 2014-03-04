@@ -1,0 +1,57 @@
+<%= form_for(@run_card) do |f| %>
+  <% if @run_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@run_card.errors.count, "error") %> prohibited this run_card from being saved:</h2>
+
+      <ul>
+      <% @run_card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    Type of Run<br>
+    <%= f.radio_button(:type, "Easy") %>
+    <%= label_tag(:type, "Chat pace run") %><br>
+    <%= f.radio_button(:type, "Speed") %>
+    <%= label_tag(:type, "Speedwork & training") %><br>
+    <%= f.radio_button(:type, "Long") %>
+    <%= label_tag(:type, "Long Runs") %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :pace %><br>
+    <%= f.text_field :pace %> Minutes per mile
+  </div>
+
+
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.text_field :distance %> Miles
+  </div>
+ 
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :target_distance %><br>
+    <%= f.text_field :target_distance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :target_race %><br>
+    <%= f.text_field :target_race %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
